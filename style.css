@@ -1,0 +1,84 @@
+/* paleta de cores https://color.adobe.com/pt/create */
+body{
+    background-color:aquamarine;
+    margin:0;
+    display:grid;
+    grid-template-areas:  'nav nav nav nav'
+                        'header section segunda div'
+                        'footer footer footer footer';   
+
+    grid-template-rows:20vh 70vh 40vh;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+header{
+    grid-area:header;
+    background-color:#B0C1D9;
+}
+
+nav{
+    background-color:#01403A;
+    grid-area:nav;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header, section, .segunda, div{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+
+nav a {
+    color:#b0c1d9;
+    text-decoration:none;
+    font-size:16pt;
+}
+
+nav a:hover{
+    color:#6295D9;
+    transition: 2s;
+}
+
+img{
+    width:200px;
+    height: 200px;
+    border-radius:10%;
+    border:4px dotted white;
+
+
+}
+
+section{
+    grid-area:section;
+    background-color: #8BADD9;
+}
+
+.segunda{
+    grid-area: segunda;
+    background-color: #024959;
+}
+
+div{
+    grid-area:div;
+    background-color: #6295D9;
+}
+
+footer{
+    grid-area:footer;
+}
+
+@media(max-width: 600px)and (orientation:landscape){
+    header{
+        background-color:aquamarine;
+    }
+}
+
+

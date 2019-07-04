@@ -7,7 +7,7 @@ body{
                         'header section segunda div'
                         'footer footer footer footer';   
 
-    grid-template-rows:20vh 70vh 40vh;
+    grid-template-rows:20vh 70vh 50vh;
     font-family: 'Palanquin Dark', sans-serif;
 }
 
@@ -73,11 +73,52 @@ div{
 
 footer{
     grid-area:footer;
+    padding:15px;
+    background-color:rgba(0, 0, 0, 0.527);
+    color:white;
+  
+    
 }
 
-@media(max-width: 600px)and (orientation:landscape){
-    header{
-        background-color:aquamarine;
+
+
+.lado{
+   
+    display:flex;
+    align-items:start;
+    padding:10px;
+    /* background-color:#024959; */
+    
+}
+
+.lado p{
+    padding:15px;
+    
+}
+
+@media(max-width:768px){
+    body{
+        grid-template-areas:'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+
+        grid-template-rows:  20vh 70vh 70vh 70vh 70vh 150vh;
+    }
+
+    footer h2{
+        text-align:center;
+    }
+    nav a {
+        display:none;
+
+    }
+
+    .lado{
+        flex-direction: column;
+        align-items:center;    
     }
 }
 
